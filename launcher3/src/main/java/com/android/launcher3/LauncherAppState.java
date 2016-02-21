@@ -39,6 +39,9 @@ import com.android.launcher3.compat.PackageInstallerCompat.PackageInstallInfo;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
+/**
+ * 单例模式，主要在启动的时候用，他初始化了一些对象，并且注册了广播监听器和ContentObserver。
+ */
 public class LauncherAppState implements DeviceProfile.DeviceProfileCallbacks {
     private static final String TAG = "LauncherAppState";
 

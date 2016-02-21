@@ -12,6 +12,50 @@ Launcher3
 
 <img src="doc/image/桌面基本结构-4.png" height="400" alt="Launcher3界面的布局和结构"/> 
 
+# Launcher3中的常用类
+
+- LauncherModel
+- BubbleTextView
+- DragController
+- LauncherAppState
+- DragView
+- DragSource
+- Folder
+- FolderIcon
+- LauncherProvider
+- ItemInfo
+
+原作者说的LauncherProvider的SQLite数据库中有两张表分别是favorites和workspacescreens
+
+
+- favorites
+favorites表
+
+| \_id  | title | intent | container | screen | cellX | cellY | spanX | spanY | itemType | appWidgetId |
+| ----- | ----- | ------ | --------- | ------ | ----- | ----- | ----- | ----- | -------- | ----------- |
+|    4  | Gallery | intent1 | -100 | 0 | 0 | 0 | {null} | {null} | 0 | -1 |
+|   6   | Settings |intent2 | -100 | 0 | 1 | 0 | {null} | {null} |	0 |	-1 | 
+|...    |... |...  |...     |...   |...|...|...|...     | ...    |...|
+
+
+favorites续表
+
+
+| isShortcut | iconType | iconPackage | icon | uri | displayMode | appWidgetProvider | modified  | restored | profiledId |
+| ---------- | -------- | ----------- | ---- |---- | ----------- | ----------------- | --------- | -------- | ---------- |
+| {null} | 0 | {null} | {null} | {null} | {null} | 0 | {null} | 0 | 0 | 0 |
+| {null} | 0 | {null} | {null} | {null} | {null} | 0 | {null} | 0 | 0 |	0 |
+|...    |... |...  |...     |...   |...|...|...|...     | ...    |...|
+
+intent1 = \#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.android.gallery3d/.app.Gallery;end	
+intent2 = \#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.android.settings/.Settings;end
+
+- workspacescreens
+
+| \_id | screenRank | modified |
+|-----|------------|----------|
+|0|0|0|
+
 ---
 我写了几篇博客来讲解Launcher3桌面什么的，有兴趣的可以看看这里：
 

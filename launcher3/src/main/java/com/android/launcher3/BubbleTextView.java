@@ -37,6 +37,7 @@ import android.widget.TextView;
  * TextView that draws a bubble behind the text. We cannot use a LineBackgroundSpan
  * because we want to make the bubble taller than the text and TextView's clip is
  * too aggressive.
+ * 图标都是基于他，不过奇怪的是，他是继承自TextView，我之前一直以为是一个线性布局，上面放图片，下面放文字
  */
 public class BubbleTextView extends TextView {
 

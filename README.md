@@ -29,23 +29,13 @@ Launcher3
 
 
 - favorites
-favorites表
 
-| \_id  | title | intent | container | screen | cellX | cellY | spanX | spanY | itemType | appWidgetId |
-| ----- | ----- | ------ | --------- | ------ | ----- | ----- | ----- | ----- | -------- | ----------- |
-|    4  | Gallery | intent1 | -100 | 0 | 0 | 0 | {null} | {null} | 0 | -1 |
-|   6   | Settings |intent2 | -100 | 0 | 1 | 0 | {null} | {null} |	0 |	-1 | 
-|...    |... |...  |...     |...   |...|...|...|...     | ...    |...|
+| \_id  | title | intent | container | screen | cellX | cellY | spanX | spanY | itemType | appWidgetId |  isShortcut | iconType | iconPackage | icon | uri | displayMode | appWidgetProvider | modified  | restored | profiledId |
+| ----- | ----- | ------ | --------- | ------ | ----- | ----- | ----- | ----- | -------- | ----------- | ---------- | -------- | ----------- | ---- |---- | ----------- | ----------------- | --------- | -------- | ---------- |
+|    4  | Gallery | intent1 | -100 | 0 | 0 | 0 | {null} | {null} | 0 | -1 | {null} | 0 | {null} | {null} | {null} | {null} | 0 | {null} | 0 | 0 | 0 |
+|   6   | Settings |intent2 | -100 | 0 | 1 | 0 | {null} | {null} |	0 |	-1 |  {null} | 0 | {null} | {null} | {null} | {null} | 0 | {null} | 0 | 0 |	0 |
+|...    |... |...  |...     |...   |...|...|...|...     | ...    |...|...    |... |...  |...     |...   |...|...|...|...     | ...    |...|
 
-
-favorites续表
-
-
-| isShortcut | iconType | iconPackage | icon | uri | displayMode | appWidgetProvider | modified  | restored | profiledId |
-| ---------- | -------- | ----------- | ---- |---- | ----------- | ----------------- | --------- | -------- | ---------- |
-| {null} | 0 | {null} | {null} | {null} | {null} | 0 | {null} | 0 | 0 | 0 |
-| {null} | 0 | {null} | {null} | {null} | {null} | 0 | {null} | 0 | 0 |	0 |
-|...    |... |...  |...     |...   |...|...|...|...     | ...    |...|
 
 intent1 = \#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.android.gallery3d/.app.Gallery;end	
 intent2 = \#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.android.settings/.Settings;end

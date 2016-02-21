@@ -57,6 +57,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 
+/**
+ * 数据库类，Launcher3使用了SQLite，数据库文件保存在/data/data/包名/databases/launcher.db 下
+ */
 public class LauncherProvider extends ContentProvider {
     private static final String TAG = "Launcher.LauncherProvider";
     private static final boolean LOGD = false;

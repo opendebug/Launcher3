@@ -15,6 +15,8 @@
 -->
 
 <!-- Full screen view projects under the status bar and contains the background -->
+
+<!-- 主布局 -->
 <com.android.launcher3.LauncherRootView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:launcher="http://schemas.android.com/apk/res-auto"
@@ -24,7 +26,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/workspace_bg"
     android:fitsSystemWindows="true">
-
+    <!-- 继承自FrameLayout，主要功能就是处理拖拽事件 -->
     <com.android.launcher3.DragLayer
         android:id="@+id/drag_layer"
         android:layout_width="match_parent"
@@ -35,7 +37,8 @@
             android:layout_width="52dp"
             android:layout_height="52dp" />
 
-        <!-- The workspace contains 5 screens of cells -->
+        <!-- The workspace contains 5 screens of cells
+         手机屏幕上左右滑，有好几屏 -->
         <com.android.launcher3.Workspace
             android:id="@+id/workspace"
             android:layout_width="match_parent"
@@ -44,24 +47,31 @@
             launcher:pageIndicator="@+id/page_indicator">
         </com.android.launcher3.Workspace>
 
+        <!--还有最下面的4个固定不动的图标，和中间一个Button显示所有应用
+        用来放置比较常用的应用，比如拨号，短信，相机-->
         <include layout="@layout/hotseat"
             android:id="@+id/hotseat"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
+
+        <!--长按桌面空白区域的时候会进入一个界面，这里可以对屏幕进行换序操作，
+        下面有三个按钮“壁纸”，“小部件”和“设置”，这个在布局文件里的id-->
         <include layout="@layout/overview_panel"
             android:id="@+id/overview_panel"
             android:visibility="gone" />
 
         <!-- Keep these behind the workspace so that they are not visible when
-             we go into AllApps -->
+             we go into AllApps
+             在滑动屏幕的时候看见下方有个指示器，
+             告诉你桌面现在有几屏，当前是在哪一屏上 -->
         <include
             android:id="@+id/page_indicator"
             layout="@layout/page_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal" />
-
+        <!--屏幕最上方有个搜索框，在我们拖动图标的时候，这个搜索框会替换成“删除”-->
         <include
             android:id="@+id/search_drop_target_bar"
             layout="@layout/search_drop_target_bar" />

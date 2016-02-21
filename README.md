@@ -8,6 +8,9 @@ Launcher3
 * Android 5.0 版本及以上可能会出现因为相同权限声明而不能安装的问题
 * 如果你想要可以在Eclipse编译的版本，可以看这个tag: GOODBYE_ECLIPSE
 
+# Launcher3界面的布局和结构
+
+<img src="doc/image/桌面基本结构-4.png" height="400" alt="Launcher3界面的布局和结构"/> 
 
 ---
 我写了几篇博客来讲解Launcher3桌面什么的，有兴趣的可以看看这里：

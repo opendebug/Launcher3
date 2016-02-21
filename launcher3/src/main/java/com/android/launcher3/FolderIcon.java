@@ -48,6 +48,7 @@ import java.util.ArrayList;
 
 /**
  * An icon that can appear on in the workspace representing an {@link UserFolder}.
+ * 文件夹图标
  */
 public class FolderIcon extends FrameLayout implements FolderListener {
     private Launcher mLauncher;

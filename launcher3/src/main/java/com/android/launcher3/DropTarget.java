@@ -23,7 +23,7 @@ import android.util.Log;
 
 /**
  * Interface defining an object that can receive a drag.
- *
+ * 图标拖拽目标位置
  */
 public interface DropTarget {
 

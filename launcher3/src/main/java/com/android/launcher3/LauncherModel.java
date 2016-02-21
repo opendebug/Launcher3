@@ -81,6 +81,8 @@ import java.util.TreeMap;
  * Maintains in-memory state of the Launcher. It is expected that there should be only one
  * LauncherModel object held in a static. Also provide APIs for updating the database state
  * for the Launcher.
+ * 从名字我们可以看出他跟数据有关系的，保存了桌面运行时的状态信息，也提供了读写数据库的API，
+ * 他有一个内部类LoaderTask，桌面启动从数据库中读取数据并把图标和小工具添加上去的时候用的就是他。
  */
 public class LauncherModel extends BroadcastReceiver
         implements LauncherAppsCompat.OnAppsChangedCallbackCompat {

@@ -31,6 +31,13 @@ import java.util.Arrays;
 
 /**
  * Represents an item in the launcher.
+ * 运行时保存了桌面上每个项目的信息，包括图标在第几屏，第几行第几列，高度宽度等信息，
+ * 每一个ItemInfo对象都对应着数据库中的一条记录。在Launcher3源码路径下，
+ * 会有很多以Info结尾的类，这些类都是ItemInfo的子类，具体代表了桌面上的某个项目。
+ * 比如说FolderIcon和FolderInfo是对应的，BubbleTextView和ShortcutInfo是对应的，
+ * AppWidgetHostView和LauncherAppWidgetInfo是对应的。有了对应关系，可以这样通过view获取ItemInfo对象：
+ * ItemInfo info = (ItemInfo)bubbletextview.getTag();
+ * 这样这里的info其实就是ShortcutInfo对象了。
  */
 public class ItemInfo {
 
